@@ -8,13 +8,13 @@ This application will allow Sparta Global trainers to set questions to their tra
 
 ## Class Diagram
 
-![image-20201201165817597](C:\github\SpartaGlobalApp\image\image-20201201165817597.png)
+![alt text](https://github.com/KishPatel-GH/SpartaGlobalApp/blob/main/image/image-20201201165817597.png?raw=true)
 
 ## Sprint Breakdowns
 
 #### Sprint 1 - Tuesday 1st December 2020
 
-![image-20201201171558104](C:\github\SpartaGlobalApp\image\image-20201201171558104.png)
+![alt text](https://github.com/KishPatel-GH/SpartaGlobalApp/blob/main/image/image-20201201171558104.png?raw=true)
 
 ##### Sprint Overview
 

@@ -1,0 +1,13 @@
+C:\github\SpartaGlobalApp\SpartaGlobalAppBusiness\bin\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.exe
+C:\github\SpartaGlobalApp\SpartaGlobalAppBusiness\bin\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.deps.json
+C:\github\SpartaGlobalApp\SpartaGlobalAppBusiness\bin\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.runtimeconfig.json
+C:\github\SpartaGlobalApp\SpartaGlobalAppBusiness\bin\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.runtimeconfig.dev.json
+C:\github\SpartaGlobalApp\SpartaGlobalAppBusiness\bin\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.dll
+C:\github\SpartaGlobalApp\SpartaGlobalAppBusiness\bin\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.pdb
+C:\github\SpartaGlobalApp\SpartaGlobalAppBusiness\obj\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.csprojAssemblyReference.cache
+C:\github\SpartaGlobalApp\SpartaGlobalAppBusiness\obj\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.AssemblyInfoInputs.cache
+C:\github\SpartaGlobalApp\SpartaGlobalAppBusiness\obj\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.AssemblyInfo.cs
+C:\github\SpartaGlobalApp\SpartaGlobalAppBusiness\obj\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.csproj.CoreCompileInputs.cache
+C:\github\SpartaGlobalApp\SpartaGlobalAppBusiness\obj\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.dll
+C:\github\SpartaGlobalApp\SpartaGlobalAppBusiness\obj\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.pdb
+C:\github\SpartaGlobalApp\SpartaGlobalAppBusiness\obj\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.genruntimeconfig.cache

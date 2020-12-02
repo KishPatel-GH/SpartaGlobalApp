@@ -16,8 +16,8 @@ namespace SpartaGlobalAppModel
         public string Question { get; set; }
         public string ModelAnswer { get; set; }
         public string CategoryId { get; set; }
+        public string CategoryName { get; set; }
 
-        public virtual CategoriesTable Category { get; set; }
         public virtual ICollection<TraineeAnswersTable> TraineeAnswersTables { get; set; }
     }
 }

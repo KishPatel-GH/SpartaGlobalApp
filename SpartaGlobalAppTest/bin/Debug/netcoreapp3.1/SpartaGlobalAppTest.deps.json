@@ -11,6 +11,7 @@
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "NUnit": "3.12.0",
           "NUnit3TestAdapter": "3.16.1",
+          "SpartaGlobalAppBusiness": "1.0.0",
           "SpartaGlobalAppModel": "1.0.0"
         },
         "runtime": {
@@ -1472,6 +1473,14 @@
           }
         }
       },
+      "SpartaGlobalAppBusiness/1.0.0": {
+        "dependencies": {
+          "SpartaGlobalAppModel": "1.0.0"
+        },
+        "runtime": {
+          "SpartaGlobalAppBusiness.dll": {}
+        }
+      },
       "SpartaGlobalAppModel/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.0",
@@ -2272,6 +2281,11 @@
       "sha512": "sha512-A/uxsWi/Ifzkmd4ArTLISMbfFs6XpRPsXZonrIqyTY70xi8t+mDtvSM5Os0RqyRDobjMBwIDHDL4NOIbkDwf7A==",
       "path": "system.xml.xpath.xmldocument/4.3.0",
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "SpartaGlobalAppBusiness/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "SpartaGlobalAppModel/1.0.0": {
       "type": "project",

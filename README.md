@@ -35,3 +35,28 @@ The database first method proved a useful approach to setting up the database. T
 #### Sprint Retrospective
 
 Using online walkthroughs and Microsoft documentations seem to improve productivity. This approach will be useful when it comes to creating CRUD functionality in the business layer. This sprint has shown that I am able to work faster than anticipated, and that I can set myself more goals in future sprints.
+
+### Sprint 2 - Wednesday 2nd December 2020
+
+![alt text](https://github.com/KishPatel-GH/SpartaGlobalApp/blob/main/image/sprint2screenshot.png?raw=true)
+
+#### Sprint Overview
+
+Today's sprint involved implementing the CRUD functionality of the application in the business layer and then testing it within the NUNIT test layer. The application passed all the tests so far and has the basic CRUD functions described by the sprint goals.
+
+#### Sprint Goals
+
+- [x] Complete User Story 1.1
+- [x] Complete User Story 1.2
+- [x] Complete User Story 1.3
+- [x] Complete User Story 2.1
+- [x] Update Readme file
+- [x] Push to GitHub
+
+#### Sprint Review
+
+There were a few minor difficulties in managing the primary and foreign keys of the tables in the database. However, these issues were discovered during unit testing and were then resolved in the CRUD manager layer.
+
+#### Sprint Retrospective
+
+Today I found I was able to work much faster than yesterday, this may be due to the natural learning curve of understanding my project more and knowing exactly what I want it to do. Using previous examples related to CRUD functionality proved extremely useful as I was able to identify and avoid errors I had faced in the past. I had set myself an appropriate workload for today by reflecting on yesterday's retrospective.

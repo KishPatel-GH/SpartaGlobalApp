@@ -144,3 +144,6 @@ C:\github\SpartaGlobalApp\SpartaGlobalAppTest\obj\Debug\netcoreapp3.1\SpartaGlob
 C:\github\SpartaGlobalApp\SpartaGlobalAppTest\obj\Debug\netcoreapp3.1\SpartaGlobalAppTest.dll
 C:\github\SpartaGlobalApp\SpartaGlobalAppTest\obj\Debug\netcoreapp3.1\SpartaGlobalAppTest.pdb
 C:\github\SpartaGlobalApp\SpartaGlobalAppTest\obj\Debug\netcoreapp3.1\SpartaGlobalAppTest.genruntimeconfig.cache
+C:\github\SpartaGlobalApp\SpartaGlobalAppTest\bin\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.exe
+C:\github\SpartaGlobalApp\SpartaGlobalAppTest\bin\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.dll
+C:\github\SpartaGlobalApp\SpartaGlobalAppTest\bin\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.pdb

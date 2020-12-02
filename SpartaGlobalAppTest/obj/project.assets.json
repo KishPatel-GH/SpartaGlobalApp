@@ -1999,6 +1999,19 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
+      "SpartaGlobalAppBusiness/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "SpartaGlobalAppModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SpartaGlobalAppBusiness.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SpartaGlobalAppBusiness.dll": {}
+        }
+      },
       "SpartaGlobalAppModel/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -7126,6 +7139,11 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
+    "SpartaGlobalAppBusiness/1.0.0": {
+      "type": "project",
+      "path": "../SpartaGlobalAppBusiness/SpartaGlobalAppBusiness.csproj",
+      "msbuildProject": "../SpartaGlobalAppBusiness/SpartaGlobalAppBusiness.csproj"
+    },
     "SpartaGlobalAppModel/1.0.0": {
       "type": "project",
       "path": "../SpartaGlobalApp/SpartaGlobalAppModel.csproj",
@@ -7137,6 +7155,7 @@
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "NUnit >= 3.12.0",
       "NUnit3TestAdapter >= 3.16.1",
+      "SpartaGlobalAppBusiness >= 1.0.0",
       "SpartaGlobalAppModel >= 1.0.0"
     ]
   },
@@ -7166,6 +7185,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\github\\SpartaGlobalApp\\SpartaGlobalAppBusiness\\SpartaGlobalAppBusiness.csproj": {
+              "projectPath": "C:\\github\\SpartaGlobalApp\\SpartaGlobalAppBusiness\\SpartaGlobalAppBusiness.csproj"
+            },
             "C:\\github\\SpartaGlobalApp\\SpartaGlobalApp\\SpartaGlobalAppModel.csproj": {
               "projectPath": "C:\\github\\SpartaGlobalApp\\SpartaGlobalApp\\SpartaGlobalAppModel.csproj"
             }

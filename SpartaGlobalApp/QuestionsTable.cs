@@ -14,10 +14,10 @@ namespace SpartaGlobalAppModel
 
         public int QuestionId { get; set; }
         public string Question { get; set; }
-        public string ModelAnswer { get; set; }
-        public string CategoryId { get; set; }
+        public string TrainerId { get; set; }
         public string CategoryName { get; set; }
 
+        public virtual TrainerTable Trainer { get; set; }
         public virtual ICollection<TraineeAnswersTable> TraineeAnswersTables { get; set; }
     }
 }

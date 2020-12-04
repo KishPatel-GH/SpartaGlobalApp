@@ -9,11 +9,11 @@ namespace SpartaGlobalAppBusiness
 {
     public class CRUDManager
     {
-        public QuestionsTable SelectedQuestion { get; set; }
+        public TrainerTable SelectedTrainer { get; set; }
         public TraineeAnswersTable SelectedQuestionTAT { get; set; }
-        public void SetSelectedQuestion(object selectedItem)
+        public void SetSelectedTrainer(object selectedItem)
         {
-            SelectedQuestion = (QuestionsTable)selectedItem;
+            SelectedTrainer = (TrainerTable)selectedItem;
         }
         public void SetSelectedQuestionInTAT(object selectedItem)
         {
@@ -24,7 +24,7 @@ namespace SpartaGlobalAppBusiness
 
         }
         // Create a trainer
-        public void CreateTrainer(string trainerName, string trainerID, string password, string courseName)
+        public void CreateTrainer(string trainerName, string trainerID, string password, string courseName, string trainerUsername)
         {
             using (var db = new SpartaGlobalDBContext())
             {
@@ -33,6 +33,7 @@ namespace SpartaGlobalAppBusiness
                     TrainerName = trainerName,
                     TrainerId = trainerID,
                     TrainerPassword = password,
+                    TrainerUsername = trainerUsername,
                     Course = courseName
                 };
                 db.TrainerTables.Add(addTrainer);
@@ -40,7 +41,7 @@ namespace SpartaGlobalAppBusiness
             }
         }
         // Create a trainee
-        public void CreateTrainee(string traineeName, string password, string courseName, string trainerID)
+        public void CreateTrainee(string traineeName, string password, string courseName, string trainerID, string traineeUsername)
         {
             using (var db = new SpartaGlobalDBContext())
             {
@@ -48,7 +49,8 @@ namespace SpartaGlobalAppBusiness
                 {
                     TraineeName = traineeName,
                     TraineePassword = password,
-                    Course = courseName
+                    Course = courseName,
+                    TraineeUsername = traineeUsername,
                 };
                 var assignTrainer = db.TrainerTables.Where(t => t.TrainerId == trainerID).FirstOrDefault();
                 assignTrainer.TraineeTables.Add(addTrainee);
@@ -89,32 +91,31 @@ namespace SpartaGlobalAppBusiness
             }
         }
         // Create a new question
-        public void CreateQuestion(string newQuestion, string modelAnswer, string categoryID, string categoryName)
+        public void CreateQuestion(string newQuestion, string categoryName, string trainerID)
         {
             using (var db = new SpartaGlobalDBContext())
             {
                 var addQuestion = new QuestionsTable()
                 {
                     Question = newQuestion,
-                    ModelAnswer = modelAnswer,
-                    CategoryId = categoryID
+                    CategoryName = categoryName,
+                    TrainerId = trainerID
                 };
                 db.QuestionsTables.Add(addQuestion);
                 db.SaveChanges();
             }
         }
         // Update an old question 
-        public void UpdateQuestion(int qID, string updatedQuestion, string updatedAnswer, string updatedCategoryID)
-        {
-            using (var db = new SpartaGlobalDBContext())
-            {
-                SelectedQuestion = db.QuestionsTables.Where(q => q.QuestionId == qID).FirstOrDefault();
-                SelectedQuestion.Question = updatedQuestion;
-                SelectedQuestion.ModelAnswer = updatedAnswer;
-                SelectedQuestion.CategoryId = updatedCategoryID; // Not sure if CategoryName will change when the ID changes
-                db.SaveChanges();
-            }
-        }
+        //public void UpdateQuestion(int qID, string updatedQuestion, string updatedCategoryName)
+        //{
+        //    using (var db = new SpartaGlobalDBContext())
+        //    {
+        //        SelectedQuestion = db.QuestionsTables.Where(q => q.QuestionId == qID).FirstOrDefault();
+        //        SelectedQuestion.Question = updatedQuestion;
+        //        SelectedQuestion.CategoryName = updatedCategoryName;
+        //        db.SaveChanges();
+        //    }
+        //}
         // Delete an old question
         public void DeleteQuestion(int questionID)
         {

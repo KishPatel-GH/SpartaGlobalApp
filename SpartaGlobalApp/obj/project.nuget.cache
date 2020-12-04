@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "jWIBYBsv941lrJcJMtlQajlzIEd4BfEhUYzyX+VaQIHJej1BcKbyYCctHYSq+1NphuXGgwDyE9DUEEHCUm7PxQ==",
+  "dgSpecHash": "tU+8FpXyVOCKBd82bwbJNTFyMg8WGqpPX9ZNTzDO2zml9gRwTkKhTJaTqptdBT3+ZAcWm4W6R3d8ApL+1vRgsw==",
   "success": true,
   "projectFilePath": "C:\\github\\SpartaGlobalApp\\SpartaGlobalApp\\SpartaGlobalAppModel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kish Patel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Kish Patel\\.nuget\\packages\\materialdesigncolors\\1.2.7\\materialdesigncolors.1.2.7.nupkg.sha512",
+    "C:\\Users\\Kish Patel\\.nuget\\packages\\materialdesignthemes\\3.2.0\\materialdesignthemes.3.2.0.nupkg.sha512",
     "C:\\Users\\Kish Patel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Kish Patel\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Kish Patel\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

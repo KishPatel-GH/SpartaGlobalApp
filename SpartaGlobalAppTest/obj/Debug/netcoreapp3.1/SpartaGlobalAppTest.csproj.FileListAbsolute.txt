@@ -1,7 +1,6 @@
 C:\github\SpartaGlobalApp\SpartaGlobalAppTest\obj\Debug\netcoreapp3.1\SpartaGlobalAppTest.csprojAssemblyReference.cache
 C:\github\SpartaGlobalApp\SpartaGlobalAppTest\obj\Debug\netcoreapp3.1\SpartaGlobalAppTest.AssemblyInfoInputs.cache
 C:\github\SpartaGlobalApp\SpartaGlobalAppTest\obj\Debug\netcoreapp3.1\SpartaGlobalAppTest.AssemblyInfo.cs
-C:\github\SpartaGlobalApp\SpartaGlobalAppTest\obj\Debug\netcoreapp3.1\SpartaGlobalAppTest.csproj.CoreCompileInputs.cache
 C:\github\SpartaGlobalApp\SpartaGlobalAppTest\bin\Debug\netcoreapp3.1\SpartaGlobalAppModel.exe
 C:\github\SpartaGlobalApp\SpartaGlobalAppTest\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
 C:\github\SpartaGlobalApp\SpartaGlobalAppTest\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
@@ -147,3 +146,6 @@ C:\github\SpartaGlobalApp\SpartaGlobalAppTest\obj\Debug\netcoreapp3.1\SpartaGlob
 C:\github\SpartaGlobalApp\SpartaGlobalAppTest\bin\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.exe
 C:\github\SpartaGlobalApp\SpartaGlobalAppTest\bin\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.dll
 C:\github\SpartaGlobalApp\SpartaGlobalAppTest\bin\Debug\netcoreapp3.1\SpartaGlobalAppBusiness.pdb
+C:\github\SpartaGlobalApp\SpartaGlobalAppTest\bin\Debug\netcoreapp3.1\MaterialDesignColors.dll
+C:\github\SpartaGlobalApp\SpartaGlobalAppTest\bin\Debug\netcoreapp3.1\MaterialDesignThemes.Wpf.dll
+C:\github\SpartaGlobalApp\SpartaGlobalAppTest\obj\Debug\netcoreapp3.1\SpartaGlobalAppTest.csproj.CoreCompileInputs.cache

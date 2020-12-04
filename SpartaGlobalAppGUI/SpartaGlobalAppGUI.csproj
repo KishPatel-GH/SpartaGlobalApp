@@ -6,4 +6,22 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="spartalogo4.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="1.2.7" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SpartaGlobalAppBusiness\SpartaGlobalAppBusiness.csproj" />
+    <ProjectReference Include="..\SpartaGlobalApp\SpartaGlobalAppModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="spartalogo4.png" />
+  </ItemGroup>
+
 </Project>

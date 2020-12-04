@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Uqphx59bNudfjhzBvu1+Pq2CWFWdZt4Yy5Wkv/TAlaiuYJwBN/XQ4dnLH1O4PCKjMxKeAgp4GSgVHmjI4wuP5g==",
+  "dgSpecHash": "A1mYc0s1dU5P1W7AQVlR15iECQESFcUZbluzb5DW06BugMdcPspI+GVFzCXIUJZ2sLhfzu1J6+dJkI/mzy+9sQ==",
   "success": true,
   "projectFilePath": "C:\\github\\SpartaGlobalApp\\SpartaGlobalAppTest\\SpartaGlobalAppTest.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Kish Patel\\.nuget\\packages\\materialdesigncolors\\1.2.7\\materialdesigncolors.1.2.7.nupkg.sha512",
+    "C:\\Users\\Kish Patel\\.nuget\\packages\\materialdesignthemes\\3.2.0\\materialdesignthemes.3.2.0.nupkg.sha512",
     "C:\\Users\\Kish Patel\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\Kish Patel\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Kish Patel\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

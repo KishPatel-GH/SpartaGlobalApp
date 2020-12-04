@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SpartaGlobalApp
+namespace SpartaGlobalAppModel
 {
     class Program
     {

@@ -11,6 +11,7 @@ namespace SpartaGlobalAppModel
         public int? QuestionId { get; set; }
         public int? TraineeId { get; set; }
         public string Response { get; set; }
+        public string Feedback { get; set; }
         public bool? PassStatus { get; set; }
 
         public virtual QuestionsTable Question { get; set; }

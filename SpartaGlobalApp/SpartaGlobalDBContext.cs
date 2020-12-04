@@ -36,39 +36,44 @@ namespace SpartaGlobalAppModel
             modelBuilder.Entity<QuestionsTable>(entity =>
             {
                 entity.HasKey(e => e.QuestionId)
-                    .HasName("PK__Question__0DC06F8CF74B310D");
+                    .HasName("PK__Question__0DC06F8CBCC56CEE");
 
                 entity.ToTable("QuestionsTable");
 
                 entity.Property(e => e.QuestionId).HasColumnName("QuestionID");
 
-                entity.Property(e => e.CategoryId)
-                    .HasMaxLength(5)
-                    .IsUnicode(false)
-                    .HasColumnName("CategoryID")
-                    .IsFixedLength(true);
-
                 entity.Property(e => e.CategoryName)
                     .HasMaxLength(20)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.ModelAnswer)
-                    .HasMaxLength(300)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Question)
                     .HasMaxLength(200)
                     .IsUnicode(false);
+
+                entity.Property(e => e.TrainerId)
+                    .HasMaxLength(5)
+                    .IsUnicode(false)
+                    .HasColumnName("TrainerID")
+                    .IsFixedLength(true);
+
+                entity.HasOne(d => d.Trainer)
+                    .WithMany(p => p.QuestionsTables)
+                    .HasForeignKey(d => d.TrainerId)
+                    .HasConstraintName("FK__Questions__Categ__22751F6C");
             });
 
             modelBuilder.Entity<TraineeAnswersTable>(entity =>
             {
                 entity.HasKey(e => e.ResponseId)
-                    .HasName("PK__TraineeA__1AAA640CA82D2BF2");
+                    .HasName("PK__TraineeA__1AAA640C2B25CF15");
 
                 entity.ToTable("TraineeAnswersTable");
 
                 entity.Property(e => e.ResponseId).HasColumnName("ResponseID");
+
+                entity.Property(e => e.Feedback)
+                    .HasMaxLength(300)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.QuestionId).HasColumnName("QuestionID");
 
@@ -81,18 +86,18 @@ namespace SpartaGlobalAppModel
                 entity.HasOne(d => d.Question)
                     .WithMany(p => p.TraineeAnswersTables)
                     .HasForeignKey(d => d.QuestionId)
-                    .HasConstraintName("FK__TraineeAn__Quest__02FC7413");
+                    .HasConstraintName("FK__TraineeAn__Quest__282DF8C2");
 
                 entity.HasOne(d => d.Trainee)
                     .WithMany(p => p.TraineeAnswersTables)
                     .HasForeignKey(d => d.TraineeId)
-                    .HasConstraintName("FK__TraineeAn__Train__03F0984C");
+                    .HasConstraintName("FK__TraineeAn__Train__29221CFB");
             });
 
             modelBuilder.Entity<TraineeTable>(entity =>
             {
                 entity.HasKey(e => e.TraineeId)
-                    .HasName("PK__TraineeT__3BA911AA7E1A06B4");
+                    .HasName("PK__TraineeT__3BA911AA78B47E1D");
 
                 entity.ToTable("TraineeTable");
 
@@ -110,6 +115,10 @@ namespace SpartaGlobalAppModel
                     .HasMaxLength(10)
                     .IsUnicode(false);
 
+                entity.Property(e => e.TraineeUsername)
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.TrainerId)
                     .HasMaxLength(5)
                     .IsUnicode(false)
@@ -119,13 +128,13 @@ namespace SpartaGlobalAppModel
                 entity.HasOne(d => d.Trainer)
                     .WithMany(p => p.TraineeTables)
                     .HasForeignKey(d => d.TrainerId)
-                    .HasConstraintName("FK__TraineeTa__Train__00200768");
+                    .HasConstraintName("FK__TraineeTa__Train__25518C17");
             });
 
             modelBuilder.Entity<TrainerTable>(entity =>
             {
                 entity.HasKey(e => e.TrainerId)
-                    .HasName("PK__TrainerT__366A1B9C5EF78041");
+                    .HasName("PK__TrainerT__366A1B9C46727FAF");
 
                 entity.ToTable("TrainerTable");
 
@@ -145,6 +154,10 @@ namespace SpartaGlobalAppModel
 
                 entity.Property(e => e.TrainerPassword)
                     .HasMaxLength(10)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.TrainerUsername)
+                    .HasMaxLength(20)
                     .IsUnicode(false);
             });
 

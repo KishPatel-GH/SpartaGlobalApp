@@ -41,6 +41,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "MaterialDesignColors": {
+              "target": "Package",
+              "version": "[1.2.7, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -101,6 +111,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "MaterialDesignColors": {
+              "target": "Package",
+              "version": "[1.2.7, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.5.0, )"
@@ -167,6 +185,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "MaterialDesignColors": {
+              "target": "Package",
+              "version": "[1.2.7, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.0, )"

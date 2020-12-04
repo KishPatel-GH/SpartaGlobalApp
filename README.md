@@ -22,9 +22,9 @@ Within the first sprint I aimed to set-up the three layers of the application an
 
 #### Sprint Goals
 
-- [x] Complete User Story 0.1
-- [x] Complete User Story 0.2
-- [x] Complete User Story 0.3
+- [x] Complete User Story 0.1: Set-up Model
+- [x] Complete User Story 0.2: Set-up  User Interface 
+- [x] Complete User Story 0.3 Set-up Business Layer
 - [x] Update Readme file
 - [x] Push to GitHub
 
@@ -46,10 +46,10 @@ Today's sprint involved implementing the CRUD functionality of the application i
 
 #### Sprint Goals
 
-- [x] Complete User Story 1.1
-- [x] Complete User Story 1.2
-- [x] Complete User Story 1.3
-- [x] Complete User Story 2.1
+- [x] Complete User Story 1.1: CRUD Questions/Answers
+- [x] Complete User Story 1.2: Pose Questions to Trainees
+- [x] Complete User Story 1.3: Registration Page
+- [x] Complete User Story 2.1: Submit Answers to Trainers
 - [x] Update Readme file
 - [x] Push to GitHub
 
@@ -60,3 +60,27 @@ There were a few minor difficulties in managing the primary and foreign keys of 
 #### Sprint Retrospective
 
 Today I found I was able to work much faster than yesterday, this may be due to the natural learning curve of understanding my project more and knowing exactly what I want it to do. Using previous examples related to CRUD functionality proved extremely useful as I was able to identify and avoid errors I had faced in the past. I had set myself an appropriate workload for today by reflecting on yesterday's retrospective.
+
+### Sprint 3 - Thursday 3rd December 2020
+
+![alt text](https://github.com/KishPatel-GH/SpartaGlobalApp/blob/main/image/sprint3ss.png?raw=true)
+
+#### Sprint Overview
+
+In this sprint, I aimed to create a user interface for the login and home pages of the application. This would also require coding an appropriate login system in the code behind of the XAML.
+
+#### Sprint Goals
+
+- [x] Complete User Story 3.1: Appearance
+- [ ] Complete User Story 3.2: GUI Windows
+- [x] Update Readme file
+- [x] Push to GitHub
+
+#### Sprint Review
+
+The application now has a functioning login system where a user is directed to their respective homepage. However, I was not able to complete the user interface for the homepage and implement the CRUD functionality.
+
+#### Sprint Retrospective
+
+Today's sprint taught me to focus on the functionality of the application rather than the appearance of the user interface. I found that I dedicated too much time to the aesthetics of the login page, which meant I was unable to complete the home page. However, on a positive note I noticed myself becoming more familiar with XAML and hence more productive towards the end of the sprint.
+

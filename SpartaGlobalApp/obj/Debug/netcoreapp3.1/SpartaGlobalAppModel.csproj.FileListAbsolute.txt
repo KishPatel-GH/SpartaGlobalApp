@@ -1,7 +1,6 @@
 C:\github\SpartaGlobalApp\SpartaGlobalApp\obj\Debug\netcoreapp3.1\SpartaGlobalAppModel.csprojAssemblyReference.cache
 C:\github\SpartaGlobalApp\SpartaGlobalApp\obj\Debug\netcoreapp3.1\SpartaGlobalAppModel.AssemblyInfoInputs.cache
 C:\github\SpartaGlobalApp\SpartaGlobalApp\obj\Debug\netcoreapp3.1\SpartaGlobalAppModel.AssemblyInfo.cs
-C:\github\SpartaGlobalApp\SpartaGlobalApp\obj\Debug\netcoreapp3.1\SpartaGlobalAppModel.csproj.CoreCompileInputs.cache
 C:\github\SpartaGlobalApp\SpartaGlobalApp\bin\Debug\netcoreapp3.1\SpartaGlobalAppModel.exe
 C:\github\SpartaGlobalApp\SpartaGlobalApp\bin\Debug\netcoreapp3.1\SpartaGlobalAppModel.deps.json
 C:\github\SpartaGlobalApp\SpartaGlobalApp\bin\Debug\netcoreapp3.1\SpartaGlobalAppModel.runtimeconfig.json
@@ -62,3 +61,6 @@ C:\github\SpartaGlobalApp\SpartaGlobalApp\obj\Debug\netcoreapp3.1\SpartaGlobalAp
 C:\github\SpartaGlobalApp\SpartaGlobalApp\obj\Debug\netcoreapp3.1\SpartaGlobalAppModel.dll
 C:\github\SpartaGlobalApp\SpartaGlobalApp\obj\Debug\netcoreapp3.1\SpartaGlobalAppModel.pdb
 C:\github\SpartaGlobalApp\SpartaGlobalApp\obj\Debug\netcoreapp3.1\SpartaGlobalAppModel.genruntimeconfig.cache
+C:\github\SpartaGlobalApp\SpartaGlobalApp\bin\Debug\netcoreapp3.1\MaterialDesignColors.dll
+C:\github\SpartaGlobalApp\SpartaGlobalApp\bin\Debug\netcoreapp3.1\MaterialDesignThemes.Wpf.dll
+C:\github\SpartaGlobalApp\SpartaGlobalApp\obj\Debug\netcoreapp3.1\SpartaGlobalAppModel.csproj.CoreCompileInputs.cache

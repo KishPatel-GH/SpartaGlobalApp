@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\github\SpartaGlobalApp\SpartaGlobalAppGUI\App.xaml
-2601555822
+31326675986
 
-4675575862
+5235101472
 217139013893
-MainWindow.xaml;TrainerHome.xaml;
+MainWindow.xaml;TraineeHome.xaml;TrainerHome.xaml;
 
 False
 

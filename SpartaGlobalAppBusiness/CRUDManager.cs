@@ -9,20 +9,94 @@ namespace SpartaGlobalAppBusiness
 {
     public class CRUDManager
     {
-        public TrainerTable SelectedTrainer { get; set; }
-        public TraineeAnswersTable SelectedQuestionTAT { get; set; }
-        public void SetSelectedTrainer(object selectedItem)
-        {
-            SelectedTrainer = (TrainerTable)selectedItem;
-        }
-        public void SetSelectedQuestionInTAT(object selectedItem)
-        {
-            SelectedQuestionTAT = (TraineeAnswersTable)selectedItem;
-        }
         static void Main(string[] args)
         {
-
+            
         }
+
+        public QuestionsTable SelectedQuestion { get; set; }
+
+        public void SetSelectedQuestion(object selectedItem)
+        {
+            SelectedQuestion = (QuestionsTable)selectedItem;
+        }
+        public TraineeTable SelectedTrainee { get; set; }
+
+        public void SetSelectedTrainee(object selectedItem)
+        {
+            SelectedTrainee = (TraineeTable)selectedItem;
+        }
+        public TraineeAnswersTable SelectedTraineeQuestion { get; set; }
+
+        public void SetSelectedTraineeQuestion(TraineeAnswersTable selectedItem)
+        {
+            using (var db = new SpartaGlobalDBContext())
+            {
+                SelectedTraineeQuestion = (from q in db.TraineeAnswersTables
+                                           join t in db.TraineeTables on q.TraineeId equals t.TraineeId
+                                           join r in db.QuestionsTables on q.QuestionId equals r.QuestionId
+                                           where q.ResponseId == selectedItem.ResponseId
+                                           select q).First();
+            }
+        }
+
+        // Read questions
+        public List<QuestionsTable> RetrieveAllQuestions(string currentTrainer)
+        {
+            using (var db = new SpartaGlobalDBContext())
+            {
+                return (from q in db.QuestionsTables
+                        where q.TrainerId == currentTrainer
+                        select q).ToList();
+            }
+        }
+        // Read Trainees
+        public List<TraineeTable> RetrieveAllTrainees(string currentTrainer)
+        {
+            using (var db = new SpartaGlobalDBContext())
+            {
+                return (from q in db.TraineeTables
+                        where q.TrainerId == currentTrainer
+                        select q).ToList();
+            }
+        }
+        // Read TraineeAnswer Table TRAINER INPUT
+        public List<string> RetrieveAllTraineeQuestions(string currentTrainer)
+        {
+            using (var db = new SpartaGlobalDBContext())
+            {
+                var TraineeQs =  (from q in db.TraineeAnswersTables
+                                 join t in db.TraineeTables on q.TraineeId equals t.TraineeId
+                                 join r in db.QuestionsTables on q.QuestionId equals r.QuestionId
+                                 where q.TrainerId == currentTrainer
+                                 select new {q,t,r});
+                List<string> newList = new List<string>();
+                foreach (var item in TraineeQs)
+                {
+                    newList.Add($"{item.r.Question} - {item.t.TraineeName} - {item.q.ResponseId}");
+                }
+                return newList;
+            }
+        }
+        // Read TraineeAnswer Table TRAINEE INPUT
+        public List<string> RetrieveAllTraineeQuestions(int currentTrainee)
+        {
+            using (var db = new SpartaGlobalDBContext())
+            {
+                var TraineeQs = (from q in db.TraineeAnswersTables
+                                 join t in db.TraineeTables on q.TraineeId equals t.TraineeId
+                                 join r in db.QuestionsTables on q.QuestionId equals r.QuestionId
+                                 where q.TraineeId == currentTrainee
+                                 select new { q, t, r });
+                List<string> newList = new List<string>();
+                foreach (var item in TraineeQs)
+                {
+                    newList.Add($"{item.r.Question} - {item.r.TrainerId} - {item.q.ResponseId}");
+                }
+                return newList;
+            }
+        }
+
         // Create a trainer
         public void CreateTrainer(string trainerName, string trainerID, string password, string courseName, string trainerUsername)
         {
@@ -106,74 +180,83 @@ namespace SpartaGlobalAppBusiness
             }
         }
         // Update an old question 
-        //public void UpdateQuestion(int qID, string updatedQuestion, string updatedCategoryName)
-        //{
-        //    using (var db = new SpartaGlobalDBContext())
-        //    {
-        //        SelectedQuestion = db.QuestionsTables.Where(q => q.QuestionId == qID).FirstOrDefault();
-        //        SelectedQuestion.Question = updatedQuestion;
-        //        SelectedQuestion.CategoryName = updatedCategoryName;
-        //        db.SaveChanges();
-        //    }
-        //}
+        public void UpdateQuestion(string updatedQuestion, string updatedCategoryName)
+        {
+            using (var db = new SpartaGlobalDBContext())
+            {
+                SelectedQuestion = db.QuestionsTables.Where(c => c.QuestionId == SelectedQuestion.QuestionId).FirstOrDefault();
+                SelectedQuestion.Question = updatedQuestion;
+                SelectedQuestion.CategoryName = updatedCategoryName;
+                db.SaveChanges();
+            }
+        }
+
         // Delete an old question
-        public void DeleteQuestion(int questionID)
+        public void DeleteQuestion()
         {
             using (var db = new SpartaGlobalDBContext())
             {
                 var deleteQuestion =
-                    from q in db.QuestionsTables
-                    where q.QuestionId == questionID
-                    select q;
-                foreach (var q in deleteQuestion)
+                    (from q in db.QuestionsTables
+                    where q.QuestionId == SelectedQuestion.QuestionId
+                    select q);
+                var deleteQuestion2 =
+                    (from r in db.TraineeAnswersTables
+                     where r.QuestionId == SelectedQuestion.QuestionId
+                     select r).First();
+                if (deleteQuestion2 == null)
                 {
-                    db.QuestionsTables.Remove(q);
+                    foreach (var q in deleteQuestion)
+                    {
+                        db.QuestionsTables.Remove(q);
+                    }
+                    db.SaveChanges();
                 }
-                db.SaveChanges();
             }
         }
         // Delegate question to trainee
-        public void TrainerPoseQuestion(int questionID, int traineeID)
+        public void TrainerPoseQuestion()
         {
             using (var db = new SpartaGlobalDBContext())
             {
-                //var posedQuestion =
-                //    from q in db.TraineeAnswersTables
-                //    where q.QuestionId == questionID
-                //    select q;
-                //foreach (var q in posedQuestion)
-                //{
-                //    SelectedQuestionTAT.TraineeId = traineeID;
-                //}
-                //var addPosedQuestion = new TraineeAnswersTable()
-                //{
-                //    QuestionId = questionID,
-                //    TraineeId = traineeID
-                //};
-                //db.TraineeAnswersTables.Add(addPosedQuestion);
-                var posedQuestion =
-                    from a in db.TraineeAnswersTables
-                    where a.TraineeId == traineeID
-                    select a;
-                foreach (var a in posedQuestion)
+                var poseQuestionTrainee = new TraineeAnswersTable()
                 {
-                    a.QuestionId = questionID;
-                }
+                    QuestionId = SelectedQuestion.QuestionId,
+                    TraineeId = SelectedTrainee.TraineeId,
+                    TrainerId = SelectedQuestion.TrainerId
+                };
+                db.TraineeAnswersTables.Add(poseQuestionTrainee);
                 db.SaveChanges();
             }
         }
         // Trainees answer delegated question
-        public void TraineeRespondsToQuestion(int traineeID, string response)
+        public void AddResponse(int responseID, string response)
         {
             using (var db = new SpartaGlobalDBContext())
             {
-                var responseAnswer =
+                var selectedPosedQuestion =
                     from a in db.TraineeAnswersTables
-                    where a.TraineeId == traineeID
+                    where a.ResponseId == responseID
                     select a;
-                foreach (var a in responseAnswer)
+                foreach (var a in selectedPosedQuestion)
                 {
                     a.Response = response;
+                }
+                db.SaveChanges();
+            }
+        }
+        // Trainer add feedback to delegated question
+        public void AddFeedback(int responseID, string feedback)
+        {
+            using (var db = new SpartaGlobalDBContext())
+            {
+                var selectedPosedQuestion =
+                    from a in db.TraineeAnswersTables
+                    where a.ResponseId == responseID
+                    select a;
+                foreach (var a in selectedPosedQuestion)
+                {
+                    a.Feedback = feedback;
                 }
                 db.SaveChanges();
             }

@@ -6,15 +6,132 @@
         xmlns:local="clr-namespace:SpartaGlobalAppGUI"
         mc:Ignorable="d"
         Title="TrainerHome" Height="450" Width="800">
-    <Grid Background="White">
-        <Button Content="Create Question" Click="createQ_Click" HorizontalAlignment="Left" Margin="43,340,0,0" VerticalAlignment="Top" Height="38" Width="107"/>
-        <TextBox HorizontalAlignment="Left" Margin="440,44,0,0" Text="Question" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Height="69"/>
-        <ListBox Name="QList" Margin="43,26,511,304" Background="#FF897E7E" SelectionChanged="ListBox_SelectionChanged"/>
-        <ListBox Margin="43,173,511,143" Background="#FF897E7E"/>
-        <Button Content="Edit Question" HorizontalAlignment="Left" Margin="166,340,0,0" VerticalAlignment="Top" Height="38" Width="107"/>
-        <Button Content="Pose Question" HorizontalAlignment="Left" Margin="166,383,0,0" VerticalAlignment="Top" Height="38" Width="107"/>
-        <Button Content="Delete Question" HorizontalAlignment="Left" Margin="43,383,0,0" VerticalAlignment="Top" Height="38" Width="107"/>
-        <TextBox HorizontalAlignment="Left" Margin="440,156,0,0" Text="Model Answer" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Height="69"/>
-        <TextBox HorizontalAlignment="Left" Margin="440,255,0,0" Text="Category" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Height="34"/>   
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="187*"/>
+            <ColumnDefinition Width="213*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="64*"/>
+                <RowDefinition Height="34*"/>
+                <RowDefinition Height="100*"/>
+                <RowDefinition Height="36*"/>
+                <RowDefinition Height="88*"/>
+                <RowDefinition Height="47*"/>
+                <RowDefinition Height="49*"/>
+                <RowDefinition Height="16*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="28*"/>
+                <ColumnDefinition Width="112*"/>
+                <ColumnDefinition Width="56*"/>
+                <ColumnDefinition Width="59*"/>
+                <ColumnDefinition Width="97*"/>
+                <ColumnDefinition Width="22*"/>
+            </Grid.ColumnDefinitions>
+            <Button Margin="5,5,5,5" Content="Create Question" Click="createQ_Click" Grid.Column="1" Grid.Row="5" BorderBrush="{x:Null}" FontWeight="Bold">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFDC6262"/>
+                        <GradientStop Color="#FFB78CD4" Offset="1"/>
+                        <GradientStop Color="#FFE0C2EC" Offset="0.48"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <ListBox Margin="5,32,5,5" Name="QList" Background="#FFE8E6E6" SelectionChanged="QList_SelectionChanged" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" BorderBrush="#FFE8E6E6" Grid.RowSpan="2" />
+            <ListBox Margin="5,32,5,5" Name="TraineeList"  Background="#FFE8E6E6" SelectionChanged="TraineeListbox_SelectionChanged" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1" BorderBrush="#FFE8E6E6" Grid.RowSpan="2" />
+            <Button Margin="5,5,5,5" Content="Edit Question" Click="EditQ_Click" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" BorderBrush="{x:Null}" FontWeight="Bold">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFDC6262"/>
+                        <GradientStop Color="#FFB78CD4" Offset="1"/>
+                        <GradientStop Color="#FFE0C2EC" Offset="0.48"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Margin="5,5,5,5" Content="Pose Question" Click="PoseQ_Click" Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2" BorderBrush="{x:Null}" FontWeight="Bold">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFDC6262"/>
+                        <GradientStop Color="#FFB78CD4" Offset="1"/>
+                        <GradientStop Color="#FFE0C2EC" Offset="0.48"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Margin="5,5,5,5" Content="Delete Question" Click="DeleteQ_Click" Grid.Column="1" Grid.Row="6" BorderBrush="{x:Null}" FontWeight="Bold">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFDC6262"/>
+                        <GradientStop Color="#FFB78CD4" Offset="1"/>
+                        <GradientStop Color="#FFE0C2EC" Offset="0.48"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Margin="5,5,5,5" Content="Clear" Click="Clear_Click" Grid.Column="4" Grid.Row="5" BorderBrush="{x:Null}" FontWeight="Bold">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFDC6262"/>
+                        <GradientStop Color="#FFB78CD4" Offset="1"/>
+                        <GradientStop Color="#FFE0C2EC" Offset="0.48"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <ListBox Margin="5,31,5,5" x:Name="TraineeQuestionListbox" Background="#FFE8E6E6" SelectionChanged="TraineeQuestionListbox_SelectionChanged" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="3" BorderBrush="#FFE8E6E6" Grid.RowSpan="2"/>
+            <Button Margin="5,5,5,5" Content="Add Feedback" Click="Feedback_Click" Grid.Column="4" Grid.Row="6" BorderBrush="{x:Null}" FontWeight="Bold">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFDC6262"/>
+                        <GradientStop Color="#FFB78CD4" Offset="1"/>
+                        <GradientStop Color="#FFE0C2EC" Offset="0.48"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Label Margin="5,5,5,0" Content="Question Bank" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Background="#FFCDCDCD" BorderBrush="#FFE8E6E6" FontWeight="Bold"/>
+            <Label Margin="5,5,5,0" Content="My Trainees" Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1" Background="#FFCDCDCD" BorderBrush="#FFE8E6E6" FontWeight="Bold"/>
+            <Label Margin="5,5,5,0" Content="Posed Questions" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="3" Background="#FFCDCDCD" BorderBrush="#FFE8E6E6" FontWeight="Bold"/>
+            <Label Name="UserWelcome" Content="USER NAME - COURSE" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.ColumnSpan="4" FontWeight="Bold" FontSize="16" />
+            <Button Name="SpartaButton" Grid.Column="1" Grid.Row="0" Click="SpartaButton_Click" BorderBrush="{x:Null}">
+                <Button.Background>
+                    <ImageBrush ImageSource="/spartalogo.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="34*"/>
+                <RowDefinition Height="34*"/>
+                <RowDefinition Height="31*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="36*"/>
+                <RowDefinition Height="105*"/>
+                <RowDefinition Height="35*"/>
+                <RowDefinition Height="94*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="116*"/>
+                <ColumnDefinition Width="129*"/>
+                <ColumnDefinition Width="145*"/>
+                <ColumnDefinition Width="16*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Margin="5,32,5,5" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" x:Name="SelectedQTB" TextWrapping="Wrap" Background="#FFE8E6E6" BorderBrush="#FFE8E6E6" Grid.RowSpan="2"/>
+            <TextBox Margin="5,32,5,5" Grid.Row="1" Grid.Column="3" x:Name="CategoryTB" TextWrapping="Wrap" Background="#FFE8E6E6" BorderBrush="#FFE8E6E6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.RowSpan="2"/>
+            <TextBlock Margin="5,34,5,5" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" x:Name="Response" TextWrapping="Wrap" Background="#FFE8E6E6" Grid.RowSpan="2"/>
+            <TextBox Margin="5,32,5,5" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" x:Name="Feedback" TextWrapping="Wrap" Background="#FFE8E6E6" BorderBrush="#FFE8E6E6" Grid.RowSpan="2"/>
+            <TextBox Margin="5,31,5,5" Grid.Row="3" Grid.Column="1" x:Name="StudentName" TextWrapping="Wrap" Background="#FFE8E6E6" BorderBrush="#FFE8E6E6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.RowSpan="2"/>
+            <TextBox Margin="5,31,5,5" Grid.Row="3" Grid.Column="2" x:Name="StudentID" TextWrapping="Wrap" Background="#FFE8E6E6" BorderBrush="#FFE8E6E6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.RowSpan="2"/>
+            <TextBox Margin="5,31,5,5" Grid.Row="3" Grid.Column="3" x:Name="StudentCourse" TextWrapping="Wrap" Background="#FFE8E6E6" BorderBrush="#FFE8E6E6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.RowSpan="2"/>
+            <Label Margin="5,5,5,0" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Content="Question" Background="#FFCDCDCD" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Margin="5,5,5,0" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="1" Content="Category" Background="#FFCDCDCD" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Margin="5,5,5,0" Grid.Row="3" Grid.Column="1" Content="Student Name" Background="#FFCDCDCD" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Margin="5,5,5,0" Grid.Row="3" Grid.Column="2" Content="Student ID" Background="#FFCDCDCD" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Margin="5,5,5,0" Grid.Row="3" Grid.Column="3" Content="Course" Background="#FFCDCDCD" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Margin="5,5,5,0" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Content="Response" Background="#FFCDCDCD" FontWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+            <Label Margin="5,5,5,0" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" Content="Feedback" Background="#FFCDCDCD" FontWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        </Grid>
     </Grid>
 </Window>

@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="spartalogo.png" />
     <None Remove="spartalogo4.png" />
   </ItemGroup>
 
@@ -21,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="spartalogo.png" />
     <Resource Include="spartalogo4.png" />
   </ItemGroup>
 

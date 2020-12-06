@@ -65,3 +65,5 @@ C:\github\SpartaGlobalApp\SpartaGlobalAppGUI\bin\Debug\netcoreapp3.1\SpartaGloba
 C:\github\SpartaGlobalApp\SpartaGlobalAppGUI\bin\Debug\netcoreapp3.1\SpartaGlobalAppModel.pdb
 C:\github\SpartaGlobalApp\SpartaGlobalAppGUI\obj\Debug\netcoreapp3.1\TrainerHome.g.cs
 C:\github\SpartaGlobalApp\SpartaGlobalAppGUI\obj\Debug\netcoreapp3.1\TrainerHome.baml
+C:\github\SpartaGlobalApp\SpartaGlobalAppGUI\obj\Debug\netcoreapp3.1\TraineeHome.g.cs
+C:\github\SpartaGlobalApp\SpartaGlobalAppGUI\obj\Debug\netcoreapp3.1\TraineeHome.baml

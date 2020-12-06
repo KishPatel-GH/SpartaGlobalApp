@@ -16,5 +16,8 @@ namespace SpartaGlobalAppModel
         public string Question { get; set; }
         public string TrainerId { get; set; }
         public string CategoryName { get; set; }
+
+        public virtual TrainerTable Trainer { get; set; }
+        public virtual ICollection<TraineeAnswersTable> TraineeAnswersTables { get; set; }
     }
 }

@@ -76,10 +76,10 @@ namespace SpartaGlobalAppGUI
             {
                 string rID = TraineeQuestionListbox.SelectedItem.ToString();
                 var x = (from q in db.TraineeAnswersTables
-                        join t in db.TraineeTables on q.TraineeId equals t.TraineeId
-                        join r in db.QuestionsTables on q.QuestionId equals r.QuestionId
-                        where q.ResponseId == Int32.Parse((rID.Substring(rID.Length - 4)))
-                        select new { q, t, r }).First();
+                         join t in db.TraineeTables on q.TraineeId equals t.TraineeId
+                         join r in db.QuestionsTables on q.QuestionId equals r.QuestionId
+                         where q.ResponseId == Int32.Parse((rID.Substring(rID.Length - 4)))
+                         select new { q, t, r }).First();
                 SelectedQTB.Text = x.r.Question;
                 CategoryTB.Text = x.r.CategoryName;
                 StudentName.Text = x.t.TraineeName;
@@ -103,7 +103,7 @@ namespace SpartaGlobalAppGUI
                 PopulateQuestionField();
             }
         }
-        
+
 
         private void EditQ_Click(object sender, RoutedEventArgs e)
         {

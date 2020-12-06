@@ -36,7 +36,7 @@ namespace SpartaGlobalAppModel
             modelBuilder.Entity<QuestionsTable>(entity =>
             {
                 entity.HasKey(e => e.QuestionId)
-                    .HasName("PK__Question__0DC06F8C98C07075");
+                    .HasName("PK__Question__0DC06F8C087F0E14");
 
                 entity.ToTable("QuestionsTable");
 
@@ -58,13 +58,13 @@ namespace SpartaGlobalAppModel
                 entity.HasOne(d => d.Trainer)
                     .WithMany(p => p.QuestionsTables)
                     .HasForeignKey(d => d.TrainerId)
-                    .HasConstraintName("FK__Questions__Train__51300E55");
+                    .HasConstraintName("FK__Questions__Train__6442E2C9");
             });
 
             modelBuilder.Entity<TraineeAnswersTable>(entity =>
             {
                 entity.HasKey(e => e.ResponseId)
-                    .HasName("PK__TraineeA__1AAA640C986DE476");
+                    .HasName("PK__TraineeA__1AAA640CB05136A4");
 
                 entity.ToTable("TraineeAnswersTable");
 
@@ -91,23 +91,23 @@ namespace SpartaGlobalAppModel
                 entity.HasOne(d => d.Question)
                     .WithMany(p => p.TraineeAnswersTables)
                     .HasForeignKey(d => d.QuestionId)
-                    .HasConstraintName("FK__TraineeAn__Quest__56E8E7AB");
+                    .HasConstraintName("FK__TraineeAn__Quest__69FBBC1F");
 
                 entity.HasOne(d => d.Trainee)
                     .WithMany(p => p.TraineeAnswersTables)
                     .HasForeignKey(d => d.TraineeId)
-                    .HasConstraintName("FK__TraineeAn__Train__58D1301D");
+                    .HasConstraintName("FK__TraineeAn__Train__6BE40491");
 
                 entity.HasOne(d => d.Trainer)
                     .WithMany(p => p.TraineeAnswersTables)
                     .HasForeignKey(d => d.TrainerId)
-                    .HasConstraintName("FK__TraineeAn__Train__57DD0BE4");
+                    .HasConstraintName("FK__TraineeAn__Train__6AEFE058");
             });
 
             modelBuilder.Entity<TraineeTable>(entity =>
             {
                 entity.HasKey(e => e.TraineeId)
-                    .HasName("PK__TraineeT__3BA911AA8C063E06");
+                    .HasName("PK__TraineeT__3BA911AA9BF2A880");
 
                 entity.ToTable("TraineeTable");
 
@@ -138,13 +138,13 @@ namespace SpartaGlobalAppModel
                 entity.HasOne(d => d.Trainer)
                     .WithMany(p => p.TraineeTables)
                     .HasForeignKey(d => d.TrainerId)
-                    .HasConstraintName("FK__TraineeTa__Train__540C7B00");
+                    .HasConstraintName("FK__TraineeTa__Train__671F4F74");
             });
 
             modelBuilder.Entity<TrainerTable>(entity =>
             {
                 entity.HasKey(e => e.TrainerId)
-                    .HasName("PK__TrainerT__366A1B9CAC76BFE8");
+                    .HasName("PK__TrainerT__366A1B9C6B055B32");
 
                 entity.ToTable("TrainerTable");
 

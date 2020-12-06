@@ -11,7 +11,7 @@ namespace SpartaGlobalAppBusiness
     {
         static void Main(string[] args)
         {
-            
+
         }
 
         public QuestionsTable SelectedQuestion { get; set; }
@@ -65,11 +65,11 @@ namespace SpartaGlobalAppBusiness
         {
             using (var db = new SpartaGlobalDBContext())
             {
-                var TraineeQs =  (from q in db.TraineeAnswersTables
+                var TraineeQs = (from q in db.TraineeAnswersTables
                                  join t in db.TraineeTables on q.TraineeId equals t.TraineeId
                                  join r in db.QuestionsTables on q.QuestionId equals r.QuestionId
                                  where q.TrainerId == currentTrainer
-                                 select new {q,t,r});
+                                 select new { q, t, r });
                 List<string> newList = new List<string>();
                 foreach (var item in TraineeQs)
                 {
@@ -198,8 +198,8 @@ namespace SpartaGlobalAppBusiness
             {
                 var deleteQuestion =
                     (from q in db.QuestionsTables
-                    where q.QuestionId == SelectedQuestion.QuestionId
-                    select q);
+                     where q.QuestionId == SelectedQuestion.QuestionId
+                     select q);
                 var deleteQuestion2 =
                     (from r in db.TraineeAnswersTables
                      where r.QuestionId == SelectedQuestion.QuestionId

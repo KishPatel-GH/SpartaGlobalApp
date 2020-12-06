@@ -17,5 +17,6 @@ namespace SpartaGlobalAppModel
 
         public virtual QuestionsTable Question { get; set; }
         public virtual TraineeTable Trainee { get; set; }
+        public virtual TrainerTable Trainer { get; set; }
     }
 }

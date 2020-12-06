@@ -20,5 +20,6 @@ namespace SpartaGlobalAppModel
         public string TraineePassword { get; set; }
 
         public virtual TrainerTable Trainer { get; set; }
+        public virtual ICollection<TraineeAnswersTable> TraineeAnswersTables { get; set; }
     }
 }

@@ -133,7 +133,7 @@ namespace SpartaGlobalAppGUI {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SpartaGlobalAppGUI;component/traineehome.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SpartaGlobalAppGUI;V1.0.0.0;component/traineehome.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\TraineeHome.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

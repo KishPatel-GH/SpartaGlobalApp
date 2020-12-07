@@ -149,7 +149,7 @@ namespace SpartaGlobalAppGUI {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SpartaGlobalAppGUI;component/trainerhome.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SpartaGlobalAppGUI;V1.0.0.0;component/trainerhome.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\TrainerHome.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
